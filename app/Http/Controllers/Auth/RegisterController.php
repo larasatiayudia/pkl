@@ -54,7 +54,8 @@ class RegisterController extends Controller
             'Nama' => 'required|string|max:25',
             'Kantor' => 'required|string|max:255',
             'Jabatan' => 'required|string|max:25',
-            'Divisi' => 'required|string|max:50'
+            'Divisi' => 'required|string|max:50',
+            'id_grup' => 'required|numeric'
         ]);
     }
 
@@ -72,6 +73,7 @@ class RegisterController extends Controller
             'Kantor' => $data['Kantor'],
             'Jabatan' => $data['Jabatan'],
             'Divisi' => $data['Divisi'],
+            'id_grup' => $data['id_grup'],
             'username' => strtolower($data['username']),
             'password' => bcrypt($data['password'])
         ]);

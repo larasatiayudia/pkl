@@ -114,6 +114,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('Divisi') ? ' has-error' : '' }}">
+                            <label for="id_grup" class="col-md-4 control-label">Grup</label>
+
+                            <div class="col-md-6">
+                                <input id="id_grup" type="text" class="form-control" name="id_grup" value="{{ old('id_grup') }}" required>
+
+                                @if ($errors->has('id_grup'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('id_grup') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
