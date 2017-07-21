@@ -25,13 +25,20 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+     protected function redirectTo(){
+        if ( \Auth::user()->status == 1 )
+        {
+          return '/dashboard';
+        }
+        return '/';
+      }
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

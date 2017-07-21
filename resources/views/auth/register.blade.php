@@ -64,7 +64,7 @@
                             <label for="Nama" class="col-md-4 control-label">Nama</label>
 
                             <div class="col-md-6">
-                                <input id="Nama" type="text" class="form-control" name="Nama" required>
+                                <input id="Nama" type="text" class="form-control" name="Nama" value="{{ old('Nama') }}" required>
 
                                 @if ($errors->has('Nama'))
                                     <span class="help-block">
@@ -78,7 +78,7 @@
                             <label for="Kantor" class="col-md-4 control-label">Kantor</label>
 
                             <div class="col-md-6">
-                                <input id="Kantor" type="text" class="form-control" name="Kantor" required>
+                                <input id="Kantor" type="text" class="form-control" name="Kantor" value="{{ old('Kantor') }}" required>
 
                                 @if ($errors->has('Kantor'))
                                     <span class="help-block">
@@ -91,7 +91,7 @@
                             <label for="Jabatan" class="col-md-4 control-label">Jabatan</label>
 
                             <div class="col-md-6">
-                                <input id="Jabatan" type="text" class="form-control" name="Jabatan" required>
+                                <input id="Jabatan" type="text" class="form-control" name="Jabatan" value="{{ old('Jabatan') }}" required>
 
                                 @if ($errors->has('Jabatan'))
                                     <span class="help-block">
@@ -105,7 +105,7 @@
                             <label for="Divisi" class="col-md-4 control-label">Divisi</label>
 
                             <div class="col-md-6">
-                                <input id="Divisi" type="text" class="form-control" name="Divisi" required>
+                                <input id="Divisi" type="text" class="form-control" name="Divisi" value="{{ old('Divisi') }}" required>
 
                                 @if ($errors->has('Divisi'))
                                     <span class="help-block">

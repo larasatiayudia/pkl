@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Model\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'Kantor' => $data['Kantor'],
             'Jabatan' => $data['Jabatan'],
             'Divisi' => $data['Divisi'],
-            'username' => $data['username'],
+            'username' => strtolower($data['username']),
             'password' => bcrypt($data['password'])
         ]);
     }
