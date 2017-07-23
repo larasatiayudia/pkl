@@ -101,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('Divisi') ? ' has-error' : '' }}">
+                        <!-- <div class="form-group{{ $errors->has('Divisi') ? ' has-error' : '' }}">
                             <label for="Divisi" class="col-md-4 control-label">Divisi</label>
 
                             <div class="col-md-6">
@@ -113,8 +113,8 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('Divisi') ? ' has-error' : '' }}">
+                        </div> -->
+                        <!-- <div class="form-group{{ $errors->has('Divisi') ? ' has-error' : '' }}">
                             <label for="id_grup" class="col-md-4 control-label">Grup</label>
 
                             <div class="col-md-6">
@@ -126,8 +126,47 @@
                                     </span>
                                 @endif
                             </div>
+                        </div> -->
+
+                        <div class="form-group">
+                            <label for="id_grup" class="col-md-4 control-label">Grup</label>
+                            <select name="id_grup" class="form-control" style="width:350px">
+                              <option value="">--- Pilih grup ---</option>
+                            @foreach ($grups as $grup)
+                              <option value="{{ $grup -> id_grup }}">{{ $grup -> Nama_grup }}</option>
+                            @endforeach
+                            </select>
                         </div>
 
+                        <div class="form-group">
+                          <label for="id_divisi" class="col-md-4 control-label">Divisi</label>
+                          <select name="id_divisi" class="form-control" style="width:350px"> </select>
+                        </div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                        <script type="text/javascript">
+                          $(document).ready(function() {
+                            $('select[name="id_grup"]').on('change', function() {
+                              var grupID = $(this).val();
+                              if(grupID) {
+                                $.ajax({
+                                  url: '/formajax/'+grupID,
+                                  type: "GET",
+                                  dataType: "json",
+                                  success:function(data) {
+                                      $('select[name="id_divisi"]').empty();
+                                      i=0;
+                                      $.each(data, function() {
+                                        $('select[name="id_divisi"]').append('<option value="'+ data[i].id_divisi +'">'+ data[i].nama_divisi +'</option>');
+                                        i+=1;
+                                      });
+                                  }
+                                });
+                              }else{
+                                $('select[name="id_divisi"]').empty();
+                              }
+                            });
+                          });
+                          </script>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
