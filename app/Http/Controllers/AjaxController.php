@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\divisi;
+use App\Model\jabatan;
 
 class AjaxController extends Controller
 {
-  public function divisiform($id){
-    $divisi =  divisi::where('id_grup',$id)->get();
-    return $divisi;
+  public function jabatanform($id){
+    $jabatan =  jabatan::where('id_grup',$id)->get();
+    return $jabatan;
   }
 }

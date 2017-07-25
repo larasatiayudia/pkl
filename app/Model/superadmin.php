@@ -4,13 +4,13 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class divisi extends Model
+class superadmin extends Model
 {
-  protected $table = 'divisi';
-  protected $primaryKey = 'id_divisi';
+  protected $table = 'superadmin';
+  protected $primaryKey = 'id_sa';
 
   protected $fillable = [
-      'id_divisi','id_grup','nama_divisi'
+      'id_sa','id_grup','username','password','status'
   ];
   public $timestamps = false;
 

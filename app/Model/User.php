@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $primaryKey = 'id_user';
 
     protected $fillable = [
-        'NIP', 'Nama', 'Kantor','Jabatan','Divisi','id_grup','username','password'
+        'NIP', 'Nama', 'Kantor','id_jabatan','Status','id_divisi', 'id_grup','username','password'
     ];
 
     /**
@@ -59,4 +59,10 @@ public function setAttribute($key, $value)
   }
 }
 
+public function grading(){
+  return $this->hasMany('App\Model\grading');
+}
+public function peserta(){
+  return $this->hasMany('App\Model\peserta');
+}
 }
