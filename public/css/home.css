@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+.container-home {
+  padding-right: 200px;
+  padding-left: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+li {
+   list-style-type: none; 
+}
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 
 .circle {
   margin: 36px;
@@ -7,7 +20,11 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
+<<<<<<< HEAD
   border: 2px solid #cc5708;
+=======
+  border: 2px solid #1d2087;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 }
 
 .circle::before,
@@ -30,15 +47,25 @@
 .circle {
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
   background-color: #F5F5F5;
   border: 8px solid #e15f07;
   color: #F3921D;
+=======
+  background-color: #fff;
+  border: 2px solid #5c5eae;
+  color: #5c5eae;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   line-height: 50px;
   overflow: hidden;
 }
 
 .circle:hover {
+<<<<<<< HEAD
   color: #F5F5F5;
+=======
+  color: #fff;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 }
 .circle::after {
   top: 0;
@@ -50,7 +77,11 @@
   transform: scale(.5);
 }
 .circle:hover::after {
+<<<<<<< HEAD
   background-color: rgba(246,148,49,0.7);;
+=======
+  background: #5c5eae;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   border-radius: 50%;
   -webkit-transform: scale(.9);
   transform: scale(.9);
@@ -92,10 +123,17 @@
   display: inline-block;
   padding: 16px;
   text-align: center;
+<<<<<<< HEAD
   width: 120px;
   height: 120px;
   border-radius: 50%;
   border: 2px solid #cc5708;
+=======
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #1d2087;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 }
 
 .circlexs::before,
@@ -118,9 +156,15 @@
 .circlexs {
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
   background-color: #F5F5F5;
   border: 8px solid #e15f07;
   color: #F3921D;
+=======
+  background-color: #fff;
+  border: 2px solid #5c5eae;
+  color: #5c5eae;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   line-height: 50px;
   overflow: hidden;
 }
@@ -138,14 +182,21 @@
   transform: scale(.5);
 }
 .circlexs:hover::after {
+<<<<<<< HEAD
   background: #f69431;
+=======
+  background: #5c5eae;
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   border-radius: 50%;
   -webkit-transform: scale(.9);
   transform: scale(.9);
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 .btn-circle {
   width: 30px;
   height: 30px;
@@ -164,6 +215,7 @@
   line-height: 1.33;
   border-radius: 100px;
 }
+<<<<<<< HEAD
 
 .garismerah {
   border: 4px solid #FFCC07;
@@ -222,3 +274,5 @@
     padding-right: 5px;
 
   }
+=======
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad

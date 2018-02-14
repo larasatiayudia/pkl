@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 use Jenssegers\Agent\Agent;
 
 $agent = new Agent();
@@ -234,3 +235,34 @@ if($check == "IE8.0"){
 		});
 	});
 }
+=======
+Route::get('/', function () {
+    return view('auth.login');
+});
+
+
+
+
+
+
+Route::get('/formajax/{id}', 'AjaxController@jabatanform');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth','admin']],function(){
+  Route::get('/dashboard','AdminController@index');
+  Route::put('/dashboard','AdminController@update');
+  Route::delete('/dashboard/{id}','AdminController@delete');
+});
+Route::group(['middleware' => ['auth']],function(){
+  Route::get('/home', function () {
+    return view('user.home');
+	});
+  Route::get('/jangkapendek', function () {
+    return view('user.jangkapendek');
+  });
+});
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad

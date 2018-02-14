@@ -17,6 +17,10 @@ class soal extends Model
       return $this->belongsTo('App\Model\test','id_test');
     }
     public function grading(){
+<<<<<<< HEAD
       return $this->hasOne('App\Model\grading','id_soal');
+=======
+      return $this->hasOne('App\Model\grading');
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
     }
 }

@@ -18,6 +18,10 @@ class attempt extends Model
     return $this->belongsTo('App\Model\peserta','id_peserta');
   }
   public function grading(){
+<<<<<<< HEAD
     return $this->hasMany('App\Model\grading','id_attempt');
+=======
+    return $this->hasMany('App\Model\grading');
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   }
 }

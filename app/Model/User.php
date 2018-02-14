@@ -7,7 +7,39 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+<<<<<<< HEAD
   use Notifiable;
+=======
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
+    protected $table = 'user';
+    protected $primaryKey = 'id_user';
+
+    protected $fillable = [
+        'NIP', 'Nama', 'Kantor','id_jabatan','Status','id_divisi', 'id_grup','username','password'
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    public $timestamps = false;
+    protected $hidden = [
+        'password'
+    ];
+
+    public function getRememberToken()
+{
+  return null; // not supported
+}
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 
   /**
    * The attributes that are mass assignable.
@@ -81,4 +113,10 @@ class User extends Authenticatable
       return $this-> belongsTo('App\Model\level','id_level');
   }
 
+public function grading(){
+  return $this->hasMany('App\Model\grading');
+}
+public function peserta(){
+  return $this->hasMany('App\Model\peserta');
+}
 }

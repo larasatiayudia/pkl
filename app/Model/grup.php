@@ -15,6 +15,7 @@ class grup extends Model
   public $timestamps = false;
 
   public function user(){
+<<<<<<< HEAD
     return $this->hasMany('App\Model\User','id_grup');
   }
   public function divisi(){
@@ -25,6 +26,18 @@ class grup extends Model
   }
   public function superadmin(){
     return $this->hasMany('App\Model\superadmin','id_grup');
+=======
+    return $this->hasMany('App\Model\User');
+  }
+  public function divisi(){
+    return $this->hasMany('App\Model\divisi');
+  }
+  public function jabatan(){
+    return $this->hasMany('App\Model\jabatan');
+  }
+  public function superadmin(){
+    return $this->hasOne('App\Model\superadmin');
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
   }
 
 }

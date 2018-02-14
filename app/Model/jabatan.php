@@ -17,6 +17,7 @@ class jabatan extends Model
     public function grup(){
       return $this->belongsTo('App\Model\grup','id_grup');
     }
+<<<<<<< HEAD
     public function admin(){
       return $this->hasMany('App\Model\grup','id_jabatan');
     }
@@ -27,4 +28,6 @@ class jabatan extends Model
     {
         return $this->hasMany('App\Model\User','id_jabatan');
     }
+=======
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
 }

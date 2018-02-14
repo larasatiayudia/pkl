@@ -63,10 +63,18 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'NIP' => 'required|string|max:25',
             'username' => 'required|string|max:20|unique:user',
+<<<<<<< HEAD
             'password' => 'required|string|min:6',
             'nama' => 'required|string|max:25',
             'id_kantor' => 'required|max:255',
             'id_jabatan' => 'required|string|max:25',
+=======
+            'password' => 'required|string|min:6|confirmed',
+            'Nama' => 'required|string|max:25',
+            'Kantor' => 'required|string|max:255',
+            'id_jabatan' => 'required|numeric',
+          //  'id_divisi' => 'required|numeric',
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
             'id_grup' => 'required|numeric'
         ]);
     }
@@ -82,10 +90,17 @@ class RegisterController extends Controller
         
         return User::create([
             'NIP' => $data['NIP'],
+<<<<<<< HEAD
             'Nama' => $data['nama'],
             'id_kantor' => $data['id_kantor'],
             'id_jabatan' => $data['id_jabatan'],
             'Status' => 0,
+=======
+            'Nama' => $data['Nama'],
+            'Kantor' => $data['Kantor'],
+            'id_jabatan' => $data['id_jabatan'],
+           // 'id_divisi' => $data['id_divisi'],
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
             'id_grup' => $data['id_grup'],
             'username' => strtolower($data['username']),
             'password' => bcrypt($data['password']),

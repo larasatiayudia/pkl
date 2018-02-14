@@ -229,10 +229,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
         'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
         'Date' => Jenssegers\Date\Date::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
+=======
+>>>>>>> fa122edbca942ccf9aae4179d40f3ee3360513ad
     ],
 
 ];
