@@ -15,7 +15,7 @@ class admin
      */
     public function handle($request, Closure $next)
     {
-      if ( \Auth::user()->status == 1 )
+      if ( \Auth::user()->Status == 1 )
       {
         return $next($request);
       }

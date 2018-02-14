@@ -1,0 +1,274 @@
+.circle-tile {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.circle-tile-heading {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto -40px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 100%;
+    color: #fff;
+    transition: all ease-in-out .3s;
+}
+
+/* -- Background Helper Classes */
+
+/* Use these to cuztomize the background color of a div. These are used along with tiles, or any other div you want to customize. */
+
+ .dark-blue {
+    background-color: #34495e;
+}
+
+.green {
+    background-color: #16a085;
+}
+
+.blue {
+    background-color: #2980b9;
+}
+
+.orange {
+    background-color: #f39c12;
+}
+
+.red {
+    background-color: #e74c3c;
+}
+
+.purple {
+    background-color: #8e44ad;
+}
+
+.dark-gray {
+    background-color: #7f8c8d;
+}
+
+.gray {
+    background-color: #95a5a6;
+}
+
+.light-gray {
+    background-color: #bdc3c7;
+}
+
+.yellow {
+    background-color: #f1c40f;
+}
+
+/* -- Text Color Helper Classes */
+
+ .text-dark-blue {
+    color: #34495e;
+}
+
+.text-green {
+    color: #16a085;
+}
+
+.text-blue {
+    color: #2980b9;
+}
+
+.text-orange {
+    color: #f39c12;
+}
+
+.text-red {
+    color: #e74c3c;
+}
+
+.text-purple {
+    color: #8e44ad;
+}
+
+.text-faded {
+    color: rgba(255,255,255,0.7);
+}
+
+
+
+.circle-tile-heading .fa {
+    line-height: 80px;
+}
+
+.circle-tile-content {
+    padding-top: 50px;
+}
+.circle-tile-description {
+    text-transform: uppercase;
+}
+
+.text-faded {
+    color: rgba(255,255,255,0.7);
+}
+
+.circle-tile-number {
+    padding: 5px 0 15px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.circle-tile-footer {
+    display: block;
+    padding: 10px;
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.1);
+    transition: all ease-in-out .3s;
+}
+
+.circle-tile-footer:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+.time-widget {
+    margin-top: 5px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.time-widget-heading {
+    text-transform: uppercase;
+    font-size: .5em;
+    font-weight: 400;
+    color: #fff;
+}
+#datetime{color:#fff;}
+.tile-img {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+}
+
+.tile {
+    margin-bottom: 15px;
+    padding: 15px;
+    overflow: hidden;
+    color: #fff;
+}
+
+
+/*body {
+    background-color:white ;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 16px; 
+    color: white;
+}*/
+
+
+
+.destacados{
+    padding: 70px 0;
+    text-align: center;
+  
+}   
+
+/*pake*/
+.box1 {
+    /* See "NOTE 3" */
+    position:relative;
+    z-index:1;
+    width:100%;
+    padding:20px;
+    margin:20px auto;
+     border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background:  #E4C054;
+        border-radius: 4px;
+}
+
+.box1 h3 {
+    position:relative;
+    padding:10px 30px;
+    margin:0 -30px 20px;
+    font-size:28px;
+    line-height:32px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    background:#cc0000;
+    /* css3 extras */
+    text-shadow:0 1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+       -moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+            box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    /* See "NOTE 1" */
+    zoom:1;
+}
+
+.box1 h3:before,
+.box1 h3:after {
+    content:"";
+    position:absolute;
+    /* See "NOTE 2" */
+    z-index:-1;
+    top:100%;
+    left:0;
+    border-width:0 10px 10px 0;
+    border-style:solid;
+    border-color:transparent maroon;
+}
+
+.box1 h3:after {
+    left:auto;
+    right:0;
+    border-width:0 0 10px 10px;
+}
+
+
+
+
+
+/*pake*/
+.box1 h4 {
+    position:relative;
+    padding:10px 30px;
+    margin:0 -30px 20px;
+    font-size:28px;
+    line-height:32px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    background:#87A800;
+    /* css3 extras */
+    text-shadow:0 1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+       -moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+            box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    /* See "NOTE 1" */
+    zoom:1;
+}
+
+.box1 h4:before,
+.box1 h4:after {
+    content:"";
+    position:absolute;
+    /* See "NOTE 2" */
+    z-index:-1;
+    top:100%;
+    left:0;
+    border-width:0 10px 10px 0;
+    border-style:solid;
+    border-color:transparent #647D01;
+}
+
+.box1 h4:after {
+    left:auto;
+    right:0;
+    border-width:0 0 10px 10px;
+}
+    
+.panels {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}

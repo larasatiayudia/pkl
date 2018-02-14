@@ -6,6 +6,8 @@ use App\Model\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
+
 
 class RegisterController extends Controller
 {
@@ -28,7 +30,15 @@ class RegisterController extends Controller
      * @var string
      */
 
-    protected $redirectTo = '/home';
+    protected function redirectPath()
+    {
+        if(\Auth::guard('superadmin')->check()){
+            return 'admin/users';
+        }else{
+            return '/';
+        }
+    }
+
 
     /**
      * Create a new controller instance.
@@ -37,7 +47,9 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware(function($request,$next){
+            return $next($request);
+        });
     }
 
     /**
@@ -51,11 +63,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'NIP' => 'required|string|max:25',
             'username' => 'required|string|max:20|unique:user',
-            'password' => 'required|string|min:6|confirmed',
-            'Nama' => 'required|string|max:25',
-            'Kantor' => 'required|string|max:255',
-            'Jabatan' => 'required|string|max:25',
-            'Divisi' => 'required|string|max:50',
+            'password' => 'required|string|min:6',
+            'nama' => 'required|string|max:25',
+            'id_kantor' => 'required|max:255',
+            'id_jabatan' => 'required|string|max:25',
             'id_grup' => 'required|numeric'
         ]);
     }
@@ -68,15 +79,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         return User::create([
             'NIP' => $data['NIP'],
-            'Nama' => $data['Nama'],
-            'Kantor' => $data['Kantor'],
-            'Jabatan' => $data['Jabatan'],
-            'Divisi' => $data['Divisi'],
+            'Nama' => $data['nama'],
+            'id_kantor' => $data['id_kantor'],
+            'id_jabatan' => $data['id_jabatan'],
+            'Status' => 0,
             'id_grup' => $data['id_grup'],
             'username' => strtolower($data['username']),
-            'password' => bcrypt($data['password'])
+            'password' => bcrypt($data['password']),
+            'point' => 0,
+            'registered_pw' => $data['password']
         ]);
     }
 }

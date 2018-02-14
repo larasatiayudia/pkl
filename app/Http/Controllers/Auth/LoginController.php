@@ -30,7 +30,7 @@ class LoginController extends Controller
         {
           return '/dashboard';
         }
-        return '/';
+        return '/home';
       }
 
     /**
@@ -44,3 +44,4 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 }
+

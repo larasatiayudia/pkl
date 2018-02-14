@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,6 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        Vinkla\Hashids\HashidsServiceProvider::class,
+        'Jenssegers\Date\DateServiceProvider',
+        Jenssegers\Agent\AgentServiceProvider::class,
 
     ],
 
@@ -225,7 +229,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
+        'Date' => Jenssegers\Date\Date::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
     ],
 
 ];
